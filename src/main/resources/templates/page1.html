@@ -1,0 +1,16 @@
+<h3>Page1 Sample</h3>
+<hr />
+
+<p data-th-text="${variable1}"></p>
+
+<p>List of animals:</p>
+<ul>
+  <li data-th-each="animal:${animals}">
+    <span data-th-text="${animal}"></span>
+  </li>
+</ul>
+
+<p>image url:</p>
+<span data-th-each="image:${images}">
+  <img data-th-src="@{/img/{i}.png (i = ${image})}" />
+</span>
